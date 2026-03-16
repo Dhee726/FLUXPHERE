@@ -1,46 +1,49 @@
 // Initialize Lucide Icons
 lucide.createIcons();
 
-// Mobile Menu Toggle (Using custom CSS class for smooth animation)
+// Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('is-open');
-    const icon = mobileMenuBtn.querySelector('i');
-    
-    if (mobileMenu.classList.contains('is-open')) {
-        icon.setAttribute('data-lucide', 'x');
-    } else {
-        icon.setAttribute('data-lucide', 'menu');
-    }
-    lucide.createIcons();
-});
+if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('is-open');
+        const icon = mobileMenuBtn.querySelector('i');
+        
+        if (mobileMenu.classList.contains('is-open')) {
+            icon.setAttribute('data-lucide', 'x');
+        } else {
+            icon.setAttribute('data-lucide', 'menu');
+        }
+        lucide.createIcons();
+    });
+}
 
 // Navbar Scroll Effect
 const navbar = document.getElementById('navbar');
 let lastScroll = 0;
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 50) {
-        navbar.classList.add('bg-slate-900/95', 'nav-blur', 'shadow-lg');
-        navbar.classList.remove('bg-transparent');
-    } else {
-        navbar.classList.remove('bg-slate-900/95', 'nav-blur', 'shadow-lg');
-        navbar.classList.add('bg-transparent');
-    }
-    
-    lastScroll = currentScroll;
-});
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+            navbar.classList.add('bg-slate-900/95', 'nav-blur', 'shadow-lg');
+            navbar.classList.remove('bg-transparent');
+        } else {
+            navbar.classList.remove('bg-slate-900/95', 'nav-blur', 'shadow-lg');
+            navbar.classList.add('bg-transparent');
+        }
+        
+        lastScroll = currentScroll;
+    });
+}
 
 // Smooth Scroll for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
         
-        // Ensure it starts with # and isn't just a bare #
         if(targetId.startsWith('#') && targetId.length > 1) {
             e.preventDefault();
             const target = document.querySelector(targetId);
@@ -49,8 +52,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                     behavior: 'smooth',
                     block: 'start'
                 });
-                // Close mobile menu if open
-                if(mobileMenu.classList.contains('is-open')) {
+                if(mobileMenu && mobileMenu.classList.contains('is-open')) {
                     mobileMenu.classList.remove('is-open');
                     const icon = mobileMenuBtn.querySelector('i');
                     icon.setAttribute('data-lucide', 'menu');
@@ -80,79 +82,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in').forEach((el) => {
     observer.observe(el);
 });
-
-// Web3Forms AJAX Contact Form Handler
-const contactForm = document.getElementById('contact-form');
-const toast = document.getElementById('toast');
-const toastMessage = document.getElementById('toast-message');
-
-function showToast(message, isError = false) {
-    if(!toast || !toastMessage) return; // Safety check
-    
-    // Change colors based on success/error
-    const icon = toast.querySelector('i');
-    if (isError) {
-        icon.setAttribute('data-lucide', 'alert-circle');
-        icon.classList.remove('text-green-500');
-        icon.classList.add('text-red-500');
-    } else {
-        icon.setAttribute('data-lucide', 'check-circle');
-        icon.classList.remove('text-red-500');
-        icon.classList.add('text-green-500');
-    }
-    lucide.createIcons();
-
-    toastMessage.textContent = message;
-    toast.classList.remove('translate-y-20', 'opacity-0');
-    
-    setTimeout(() => {
-        toast.classList.add('translate-y-20', 'opacity-0');
-    }, 4000);
-}
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        
-        // Show loading state
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<div class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div> Sending...';
-        
-        const formData = new FormData(contactForm);
-
-        // Send data to Web3Forms API
-        fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            body: formData
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                // Success
-                showToast('Thank you! We will contact you within 24 hours.');
-                contactForm.reset();
-            } else {
-                // API Error
-                console.log(response);
-                showToast(json.message || 'Something went wrong. Please try again.', true);
-            }
-        })
-        .catch(error => {
-            // Network Error
-            console.log(error);
-            showToast('Network error. Please try again.', true);
-        })
-        .finally(() => {
-            // Restore button
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
-            lucide.createIcons();
-        });
-    });
-}
 
 // Counter Animation for Stats
 function animateCounter(element, target, duration = 2000) {

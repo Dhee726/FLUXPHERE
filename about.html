@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Fluxphere</title>
+    <meta name="description" content="Learn about Fluxphere's mission to empower small and medium businesses through modern technology, marketing, and financial strategy.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-slate-800 antialiased">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-slate-900/95 nav-blur shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                        <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-white tracking-tight">Fluxphere</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-300 hover:text-orange-500 transition-colors font-medium">Home</a>
+                    <a href="services.html" class="text-gray-300 hover:text-orange-500 transition-colors font-medium">Services</a>
+                    <a href="about.html" class="text-orange-500 font-medium">About</a>
+                    <a href="index.html#process" class="text-gray-300 hover:text-orange-500 transition-colors font-medium">Process</a>
+                    <a href="index.html#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-orange-500/30">Book Consultation</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu-container md:hidden bg-slate-900/95 nav-blur border-t border-slate-800">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 text-gray-300 hover:text-orange-500 hover:bg-slate-800 rounded-md transition-colors">Home</a>
+                <a href="services.html" class="block px-3 py-3 text-gray-300 hover:text-orange-500 hover:bg-slate-800 rounded-md transition-colors">Services</a>
+                <a href="about.html" class="block px-3 py-3 text-orange-500 font-semibold hover:bg-slate-800 rounded-md transition-colors">About</a>
+                <a href="index.html#process" class="block px-3 py-3 text-gray-300 hover:text-orange-500 hover:bg-slate-800 rounded-md transition-colors">Process</a>
+                <a href="index.html#contact" class="block px-3 py-3 text-orange-500 font-semibold hover:bg-slate-800 rounded-md transition-colors">Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 hero-gradient overflow-hidden text-center">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%234f46e5" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        </div>
+        
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Bridging the Gap Between <br><span class="text-gradient">Ambition and Execution</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                We believe that small and medium-sized businesses deserve the same technological advantages and strategic insights as large corporations.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative fade-in">
+                    <img src="http://static.photos/office/640x480/12" alt="Our Team Workspace" class="rounded-2xl shadow-2xl w-full object-cover">
+                    <div class="absolute -bottom-8 -right-8 bg-slate-900 text-white p-8 rounded-2xl shadow-2xl max-w-xs hidden md:block">
+                        <i data-lucide="quote" class="w-10 h-10 text-orange-500 mb-4 opacity-50"></i>
+                        <p class="text-lg font-medium leading-relaxed mb-4">"Technology should be an accelerator for your business, not a bottleneck."</p>
+                        <p class="text-sm text-gray-400 font-semibold">— Fluxphere Founders</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in stagger-2">
+                    <span class="text-orange-500 font-semibold tracking-wider uppercase text-sm mb-2 block">Our Story</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Built to be the Catalyst for Your Growth</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Fluxphere was born from a simple observation: while enterprise companies have dedicated teams to integrate new technology, manage marketing, and forecast finances, smaller businesses are often left piecing together disjointed solutions.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        We set out to change that. By combining IT consulting, digital marketing, and financial advisory into a single, unified strategy, we provide a holistic growth engine for our clients. We don't just hand you a software manual; we partner with you to implement modern infrastructure, elevate your digital brand, and align your finances for long-term success.
+                    </p>
+                    
+                    <div class="flex gap-8 border-t border-gray-200 pt-8">
+                        <div>
+                            <p class="text-3xl font-bold text-slate-900 mb-1 counter" data-target="200" data-suffix="+">0</p>
+                            <p class="text-sm text-gray-500 font-medium">Businesses Scaled</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-slate-900 mb-1 counter" data-target="98" data-suffix="%">0</p>
+                            <p class="text-sm text-gray-500 font-medium">Client Retention</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-slate-900 mb-1 counter" data-target="15" data-suffix="+">0</p>
+                            <p class="text-sm text-gray-500 font-medium">Expert Consultants</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                <span class="text-orange-500 font-semibold tracking-wider uppercase text-sm mb-2 block">Our DNA</span>
+                <h2 class="text-4xl font-bold text-slate-900 mb-6">Core Values That Drive Us</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover fade-in stagger-1">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-7 h-7 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Radical Transparency</h3>
+                    <p class="text-gray-600 leading-relaxed">No hidden fees, no tech jargon designed to confuse. We give it to you straight so you can make informed decisions.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover fade-in stagger-2">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="w-7 h-7 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Agile Innovation</h3>
+                    <p class="text-gray-600 leading-relaxed">Technology moves fast, and so do we. We ensure your business is always equipped with modern, scalable tools.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover fade-in stagger-3">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-7 h-7 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">True Partnership</h3>
+                    <p class="text-gray-600 leading-relaxed">Your success is the only metric that matters to us. We treat your business goals with the same urgency as our own.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                <span class="text-orange-500 font-semibold tracking-wider uppercase text-sm mb-2 block">The Experts</span>
+                <h2 class="text-4xl font-bold text-slate-900 mb-6">Meet the Leadership Team</h2>
+                <p class="text-xl text-gray-600">Industry veterans passionate about empowering growing businesses.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group fade-in stagger-1">
+                    <div class="relative overflow-hidden rounded-2xl mb-6">
+                        <img src="http://static.photos/people/400x500/15" alt="CEO" class="w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors transform translate-y-4 group-hover:translate-y-0"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                            <a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors transform translate-y-4 group-hover:translate-y-0 delay-75"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">David Reynolds</h3>
+                    <p class="text-orange-500 font-medium mb-3">Founder & Principal Tech Consultant</p>
+                    <p class="text-gray-600 text-sm">Former enterprise software architect dedicated to bringing fortune 500 tech to small businesses.</p>
+                </div>
+
+                <div class="group fade-in stagger-2">
+                    <div class="relative overflow-hidden rounded-2xl mb-6">
+                        <img src="http://static.photos/people/400x500/22" alt="CMO" class="w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors transform translate-y-4 group-hover:translate-y-0"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Anita Patel</h3>
+                    <p class="text-orange-500 font-medium mb-3">Head of Digital Strategy</p>
+                    <p class="text-gray-600 text-sm">Award-winning marketer specializing in brand positioning and ROI-driven social campaigns.</p>
+                </div>
+
+                <div class="group fade-in stagger-3">
+                    <div class="relative overflow-hidden rounded-2xl mb-6">
+                        <img src="http://static.photos/people/400x500/18" alt="CFO" class="w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors transform translate-y-4 group-hover:translate-y-0"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                            <a href="mailto:marcus@fluxsphere.com" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors transform translate-y-4 group-hover:translate-y-0 delay-75"><i data-lucide="mail" class="w-5 h-5"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Marcus Sterling</h3>
+                    <p class="text-orange-500 font-medium mb-3">Lead Financial Advisor</p>
+                    <p class="text-gray-600 text-sm">Certified CPA with a passion for helping startups and scaling businesses optimize cash flow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-orange-500 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        </div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 fade-in">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Partner With Us?</h2>
+            <p class="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">Stop letting outdated technology and unclear strategies hold you back. Let's build a smarter, faster, and more profitable business together.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-orange-600 bg-white rounded-full hover:bg-gray-100 transition-all hover:shadow-xl">
+                    Book Free Consultation
+                    <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+                <a href="tel:+15551234567" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white rounded-full hover:bg-white hover:text-orange-600 transition-all">
+                    Call Us Now
+                    <i data-lucide="phone" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-gray-400 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">&copy; 2026 Fluxphere. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>

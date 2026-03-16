@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxphere - Technology Solutions for Growing Businesses</title>
+    <meta name="description" content="Fluxphere helps small and growing businesses improve through technology consulting, social media marketing, and financial advisory services.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-slate-800 antialiased">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                        <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-white tracking-tight">Fluxphere</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="services.html" class="text-gray-300 hover:text-orange-500 transition-colors font-medium">Services</a>
+                    <a href="about.html" class="text-gray-300 hover:text-orange-500 transition-colors font-medium">About</a>
+                    <a href="#process" class="text-gray-300 hover:text-orange-500 transition-colors font-medium">Process</a>
+                    <a href="#testimonials" class="text-gray-300 hover:text-orange-500 transition-colors font-medium">Testimonials</a>
+                    <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-orange-500/30">Book Consultation</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu-container md:hidden bg-slate-900/95 nav-blur border-t border-slate-800">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="services.html" class="block px-3 py-3 text-gray-300 hover:text-orange-500 hover:bg-slate-800 rounded-md transition-colors">Services</a>
+                <a href="about.html" class="block px-3 py-3 text-gray-300 hover:text-orange-500 hover:bg-slate-800 rounded-md transition-colors">About</a>
+                <a href="#process" class="block px-3 py-3 text-gray-300 hover:text-orange-500 hover:bg-slate-800 rounded-md transition-colors">Process</a>
+                <a href="#testimonials" class="block px-3 py-3 text-gray-300 hover:text-orange-500 hover:bg-slate-800 rounded-md transition-colors">Testimonials</a>
+                <a href="#contact" class="block px-3 py-3 text-orange-500 font-semibold hover:bg-slate-800 rounded-md transition-colors">Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center hero-gradient overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%234f46e5" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        </div>
+        
+        <div class="parallax absolute top-20 right-0 w-96 h-96 bg-orange-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" data-speed="0.3"></div>
+        <div class="parallax absolute bottom-20 left-0 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" data-speed="-0.2"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+                        <span class="text-sm font-medium text-gray-300">Trusted by 200+ Growing Businesses</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                        Transform Your <br>
+                        <span class="text-gradient">Business Future</span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-400 mb-8 max-w-lg leading-relaxed">
+                        Fluxphere empowers small and growing businesses with cutting-edge technology, strategic marketing, and expert financial guidance.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-orange-500 rounded-full hover:bg-orange-600 transition-all hover:shadow-lg hover:shadow-orange-500/30 hover:-translate-y-1">
+                            Book Free Consultation
+                            <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                        </a>
+                        <a href="services.html" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-slate-600 rounded-full hover:border-orange-500 hover:text-orange-500 transition-all">
+                            Explore Services
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:block fade-in stagger-2">
+                    <div class="relative">
+                        <img src="http://static.photos/office/640x360/42" alt="Modern Business Team" class="rounded-2xl shadow-2xl shadow-orange-500/10 relative z-10">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 max-w-xs">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="trending-up" class="w-6 h-6 text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Average Growth</p>
+                                    <p class="text-2xl font-bold text-slate-900">+<span class="counter" data-target="147" data-suffix="%">0</span></p>
+                                </div>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full w-3/4 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-6 -right-6 bg-slate-800 p-4 rounded-2xl shadow-xl z-20">
+                            <div class="flex items-center gap-3">
+                                <div class="flex -space-x-2">
+                                    <div class="w-8 h-8 rounded-full bg-blue-500 border-2 border-slate-800"></div>
+                                    <div class="w-8 h-8 rounded-full bg-orange-500 border-2 border-slate-800"></div>
+                                    <div class="w-8 h-8 rounded-full bg-green-500 border-2 border-slate-800"></div>
+                                </div>
+                                <span class="text-sm text-gray-300 font-medium">Active Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-6 h-6 text-gray-400"></i>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                <span class="text-orange-500 font-semibold tracking-wider uppercase text-sm mb-2 block">Our Expertise</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Solutions That Drive Growth</h2>
+                <p class="text-xl text-gray-600">We provide comprehensive services designed to scale your business operations and maximize your digital potential.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group bg-slate-50 rounded-2xl p-8 card-hover border border-slate-100 fade-in stagger-1">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors duration-300">
+                        <i data-lucide="cpu" class="w-8 h-8 text-orange-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Technology Consulting</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Strategic technology solutions tailored to your business needs. From system integration to digital transformation, we guide your tech journey.</p>
+                </div>
+
+                <div class="group bg-slate-50 rounded-2xl p-8 card-hover border border-slate-100 fade-in stagger-2">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors duration-300">
+                        <i data-lucide="share-2" class="w-8 h-8 text-orange-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Social Media Marketing</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Build a powerful digital presence that connects with your audience. We create strategies that convert followers into loyal customers.</p>
+                </div>
+
+                <div class="group bg-slate-50 rounded-2xl p-8 card-hover border border-slate-100 fade-in stagger-3">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors duration-300">
+                        <i data-lucide="landmark" class="w-8 h-8 text-orange-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Financial Advisory</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Expert financial guidance to optimize your resources and plan for sustainable growth. Make informed decisions with confidence.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in">
+                <a href="services.html" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-slate-900 rounded-full hover:bg-slate-800 transition-all hover:shadow-lg">
+                    View Full Services List
+                    <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-slate-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative fade-in">
+                    <div class="absolute -inset-4 bg-orange-500/20 rounded-3xl blur-2xl"></div>
+                    <img src="http://static.photos/technology/640x360/88" alt="Technology Solutions" class="relative rounded-2xl shadow-2xl w-full object-cover h-[500px]">
+                    <div class="absolute -bottom-8 -right-8 bg-white text-slate-900 p-6 rounded-2xl shadow-2xl max-w-xs hidden md:block">
+                        <p class="text-4xl font-bold text-orange-500 mb-1 counter" data-target="10" data-suffix="+">0</p>
+                        <p class="text-sm font-semibold text-gray-600">Years of Excellence</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in stagger-2">
+                    <span class="text-orange-500 font-semibold tracking-wider uppercase text-sm mb-2 block">About Fluxphere</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Empowering Smaller Businesses to Compete & Win</h2>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        At Fluxphere, we believe that every business deserves access to enterprise-level technology and expertise. Founded with a mission to democratize digital transformation, we specialize in helping small and medium-sized businesses harness the power of modern technology.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center">
+                                <i data-lucide="target" class="w-6 h-6 text-orange-500"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Goal Oriented</p>
+                                <p class="text-sm text-gray-500">Results-driven approach</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center">
+                                <i data-lucide="users" class="w-6 h-6 text-orange-500"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Client Focused</p>
+                                <p class="text-sm text-gray-500">Your success is ours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="about.html" class="inline-flex items-center text-orange-500 font-semibold hover:text-orange-400 transition-colors group">
+                        Learn more about our mission
+                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                <span class="text-orange-500 font-semibold tracking-wider uppercase text-sm mb-2 block">How We Work</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Your Journey to Success</h2>
+                <p class="text-xl text-gray-600">A proven four-step process designed to deliver measurable results for your business.</p>
+            </div>
+
+            <div class="relative">
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 process-line rounded-full"></div>
+                
+                <div class="space-y-12 md:space-y-0">
+                    <div class="relative md:flex items-center justify-between fade-in">
+                        <div class="md:w-5/12 md:text-right pr-8 mb-4 md:mb-0">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">1. Discovery & Analysis</h3>
+                            <p class="text-gray-600">We begin by understanding your business, challenges, and goals through comprehensive analysis and stakeholder interviews.</p>
+                        </div>
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-orange-500 rounded-full items-center justify-center text-white font-bold text-xl shadow-lg shadow-orange-500/30 z-10">1</div>
+                        <div class="md:w-5/12 pl-8">
+                            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                                <i data-lucide="search" class="w-8 h-8 text-orange-500 mb-3"></i>
+                                <p class="text-sm text-gray-500">Deep dive into your current operations and market position</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative md:flex items-center justify-between fade-in stagger-1">
+                        <div class="md:w-5/12 md:text-right pr-8 mb-4 md:mb-0 md:order-1 order-2">
+                            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                                <i data-lucide="lightbulb" class="w-8 h-8 text-orange-500 mb-3"></i>
+                                <p class="text-sm text-gray-500">Customized roadmap aligned with your business objectives</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-orange-500 rounded-full items-center justify-center text-white font-bold text-xl shadow-lg shadow-orange-500/30 z-10">2</div>
+                        <div class="md:w-5/12 pl-8 md:order-2 order-1 mb-4 md:mb-0">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">2. Strategy Development</h3>
+                            <p class="text-gray-600">We craft a tailored technology and marketing strategy that aligns with your budget, timeline, and growth targets.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative md:flex items-center justify-between fade-in stagger-2">
+                        <div class="md:w-5/12 md:text-right pr-8 mb-4 md:mb-0">
+                            <h3 class="text-3xl font-bold text-slate-900 mb-2">3. Implementation</h3>
+                            <p class="text-gray-600">Our team executes the strategy with precision, ensuring minimal disruption to your daily operations.</p>
+                        </div>
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-orange-500 rounded-full items-center justify-center text-white font-bold text-xl shadow-lg shadow-orange-500/30 z-10">3</div>
+                        <div class="md:w-5/12 pl-8">
+                            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                                <i data-lucide="rocket" class="w-8 h-8 text-orange-500 mb-3"></i>
+                                <p class="text-sm text-gray-500">Seamless execution with ongoing support</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative md:flex items-center justify-between fade-in stagger-3">
+                        <div class="md:w-5/12 md:text-right pr-8 mb-4 md:mb-0 md:order-1 order-2">
+                            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                                <i data-lucide="line-chart" class="w-8 h-8 text-orange-500 mb-3"></i>
+                                <p class="text-sm text-gray-500">Continuous monitoring and optimization</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-orange-500 rounded-full items-center justify-center text-white font-bold text-xl shadow-lg shadow-orange-500/30 z-10">4</div>
+                        <div class="md:w-5/12 pl-8 md:order-2 order-1 mb-4 md:mb-0">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">4. Optimization & Growth</h3>
+                            <p class="text-gray-600">We continuously monitor performance, optimize strategies, and scale solutions as your business grows.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                <span class="text-orange-500 font-semibold tracking-wider uppercase text-sm mb-2 block">Testimonials</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Trusted by Industry Leaders</h2>
+                <p class="text-xl text-gray-600">See how we've helped businesses like yours achieve remarkable growth.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-2xl fade-in stagger-1 border border-slate-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"Fluxphere transformed our entire digital infrastructure. Within 6 months, we saw a 200% increase in operational efficiency."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="http://static.photos/people/200x200/1" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="font-semibold text-slate-900">Sarah Chen</p>
+                            <p class="text-sm text-gray-500">CEO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl fade-in stagger-2 border border-slate-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"Their social media strategy tripled our online engagement. The team's expertise in digital marketing is unmatched."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="http://static.photos/people/200x200/2" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="font-semibold text-slate-900">Marcus Johnson</p>
+                            <p class="text-sm text-gray-500">Founder, GrowthLabs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl fade-in stagger-3 border border-slate-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"The financial advisory services helped us secure funding and optimize our cash flow. Essential for any growing business."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="http://static.photos/people/200x200/3" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="font-semibold text-slate-900">Elena Rodriguez</p>
+                            <p class="text-sm text-gray-500">CFO, InnovateCo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-16 border-t border-gray-200 fade-in">
+                <p class="text-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-8">Trusted by innovative companies</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+                    <div class="flex items-center gap-2 text-2xl font-bold text-slate-700">
+                        <i data-lucide="hexagon" class="w-8 h-8"></i>
+                        <span>TechFlow</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-2xl font-bold text-slate-700">
+                        <i data-lucide="triangle" class="w-8 h-8"></i>
+                        <span>Vertex</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-2xl font-bold text-slate-700">
+                        <i data-lucide="circle" class="w-8 h-8"></i>
+                        <span>Orbit</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-2xl font-bold text-slate-700">
+                        <i data-lucide="square" class="w-8 h-8"></i>
+                        <span>BlockNine</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-orange-500 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        </div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 fade-in">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">Join hundreds of businesses that have accelerated their growth with Fluxphere. Your consultation is free and comes with a customized growth roadmap.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-orange-600 bg-white rounded-full hover:bg-gray-100 transition-all hover:shadow-xl">
+                    Schedule Free Consultation
+                    <i data-lucide="calendar" class="ml-2 w-5 h-5"></i>
+                </a>
+                <a href="tel:+15551234567" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white rounded-full hover:bg-white hover:text-orange-600 transition-all">
+                    Call Us Now
+                    <i data-lucide="phone" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+            <p class="mt-6 text-orange-200 text-sm">No commitment required. Cancel anytime.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="fade-in">
+                    <span class="text-orange-500 font-semibold tracking-wider uppercase text-sm mb-2 block">Get In Touch</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Let's Start Your Growth Journey</h2>
+                    <p class="text-xl text-gray-600 mb-8">Have questions about how we can help your business? Reach out and we'll respond within 24 hours.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-900 mb-1">Email Us</p>
+                                <a href="mailto:hello@fluxsphere.com" class="block text-gray-600 hover:text-orange-500 transition-colors">hello@fluxsphere.com</a>
+                                <a href="mailto:support@fluxsphere.com" class="block text-gray-600 hover:text-orange-500 transition-colors">support@fluxsphere.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-900 mb-1">Call Us</p>
+                                <a href="tel:+15551234567" class="block text-gray-600 hover:text-orange-500 transition-colors">+1 (555) 123-4567</a>
+                                <p class="text-gray-600">Mon-Fri, 9am-6pm EST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-900 mb-1">Visit Us</p>
+                                <p class="text-gray-600">123 Innovation Drive, Suite 400</p>
+                                <p class="text-gray-600">San Francisco, CA 94105</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl fade-in stagger-2 border border-slate-100">
+                    <form id="contact-form" class="space-y-6">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <input type="hidden" name="subject" value="New Consultation Request from Fluxphere">
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-900 mb-2">First Name</label>
+                                <input type="text" name="First Name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-slate-900 transition-all" placeholder="John">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-900 mb-2">Last Name</label>
+                                <input type="text" name="Last Name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-slate-900 transition-all" placeholder="Doe">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-900 mb-2">Business Email</label>
+                            <input type="email" name="Email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-slate-900 transition-all" placeholder="john@company.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-900 mb-2">Company Name</label>
+                            <input type="text" name="Company" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-slate-900 transition-all" placeholder="Your Company">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-900 mb-2">Service Interest</label>
+                            <select name="Service Interest" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-slate-900 transition-all">
+                                <option>Technology Consulting</option>
+                                <option>Social Media Marketing</option>
+                                <option>Financial Advisory</option>
+                                <option>Multiple Services</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-900 mb-2">Message</label>
+                            <textarea name="Message" required rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-slate-900 transition-all resize-none" placeholder="Tell us about your business needs..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 rounded-xl transition-all hover:shadow-lg hover:shadow-orange-500/30 flex items-center justify-center gap-2">
+                            Send Message
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-gray-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
+                            <i data-lucide="zap" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">Fluxphere</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">Empowering small and growing businesses with technology, marketing, and financial expertise.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="services.html" class="hover:text-orange-500 transition-colors">Technology Consulting</a></li>
+                        <li><a href="services.html" class="hover:text-orange-500 transition-colors">Social Media Marketing</a></li>
+                        <li><a href="services.html" class="hover:text-orange-500 transition-colors">Financial Advisory</a></li>
+                        <li><a href="services.html" class="hover:text-orange-500 transition-colors">Digital Transformation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="hover:text-orange-500 transition-colors">About Us</a></li>
+                        <li><a href="#process" class="hover:text-orange-500 transition-colors">Our Process</a></li>
+                        <li><a href="#testimonials" class="hover:text-orange-500 transition-colors">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm">&copy; 2026 Fluxphere. All rights reserved.</p>
+                <p class="text-sm">Designed with care for growing businesses.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="fixed bottom-4 right-4 bg-slate-900 text-white px-6 py-4 rounded-xl shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-3">
+        <i data-lucide="check-circle" class="w-6 h-6 text-green-500"></i>
+        <span id="toast-message">Message sent successfully!</span>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>
